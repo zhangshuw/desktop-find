@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>桌面查找</title>
+    <link rel="stylesheet" href="/src/styles.css" />
+  </head>
+  <body>
+    <main class="search-panel">
+      <button id="close-button" type="button" aria-label="关闭搜索窗口">×</button>
+      <div id="version-badge">v0.1.1 新版测试</div>
+      <nav class="tabs" aria-label="功能切换">
+        <button class="tab-button active" type="button" data-view="search">桌面搜索</button>
+        <button class="tab-button" type="button" data-view="schedule">今日计划</button>
+      </nav>
+
+      <section id="search-view" class="view active">
+        <input id="search-input" type="search" placeholder="输入桌面图标名称..." autocomplete="off" autofocus />
+        <p id="status">正在读取桌面图标...</p>
+        <ul id="results" aria-label="搜索结果"></ul>
+      </section>
+
+      <section id="schedule-view" class="view">
+        <form id="schedule-form" class="schedule-form">
+          <input id="schedule-title" type="text" placeholder="计划内容，例如：整理桌面" autocomplete="off" />
+          <div class="schedule-fields">
+            <input id="schedule-date" type="date" />
+            <input id="schedule-start" type="time" />
+            <input id="schedule-end" type="time" />
+            <button type="submit">添加</button>
+          </div>
+          <input id="schedule-note" type="text" placeholder="备注（可选）" autocomplete="off" />
+        </form>
+        <p id="schedule-status">今日计划加载中...</p>
+        <ul id="schedule-list" aria-label="今日计划"></ul>
+      </section>
+    </main>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

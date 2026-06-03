@@ -1,0 +1,19 @@
+{
+  "name": "desktop-find",
+  "version": "0.1.1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "tauri dev",
+    "dev:frontend": "vite --host 127.0.0.1 --port 1420",
+    "build": "tauri build",
+    "build:frontend": "vite build"
+  },
+  "dependencies": {
+    "@tauri-apps/api": "^2.8.0"
+  },
+  "devDependencies": {
+    "@tauri-apps/cli": "^2.8.4",
+    "vite": "^6.0.0"
+  }
+}

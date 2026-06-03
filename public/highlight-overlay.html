@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>桌面图标高亮</title>
+    <style>
+      html,
+      body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        background: transparent;
+        overflow: hidden;
+      }
+
+      /* 单个透明窗里画一圈实线边框，中间镂空透出图标，无柔光晕染。 */
+      .frame {
+        box-sizing: border-box;
+        width: 100%;
+        height: 100%;
+        border: 3px solid #ffd84d;
+        border-radius: 10px;
+        background: transparent;
+        /* 1px 深色描边，让黄框在浅色壁纸上也清晰，是硬边不是模糊光圈。 */
+        box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.35);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="frame"></div>
+  </body>
+</html>
